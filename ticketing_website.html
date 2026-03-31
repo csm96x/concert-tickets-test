@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No. 1 events website</title>
+  </head>
+  <body>
+    <h1>Concert Ticket Booking </h1>
+	<label> Number of tickets:</label>
+	<input id="tickets" type="number">
+	
+	<br><br>
+	
+	<button id="add" onclick="addToCart()">Add to cart </button>
+    <p id="message"></p>
+	
+	<script>
+      function addToCart() {
+        var tickets = document.getElementById("tickets").value;
+
+        if (tickets === "" || tickets <= 0) {
+          document.getElementById("message").innerText = "Please enter a valid number of tickets.";
+        } else {
+          document.getElementById("message").innerText = tickets + " tickets added to cart!";
+        }
+      }
+    </script>
+	
+  </body>
+</html>
